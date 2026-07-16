@@ -3,65 +3,174 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>신형섭 | 개발자</title>
-  <meta name="description" content="신형섭의 반응형 프로페셔널 포트폴리오 사이트">
+  <title>신형섭 | 개발자 포트폴리오</title>
+  <meta name="description" content="신형섭의 반응형 프로페셔널 포트폴리오와 지렁이 게임">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <script defer src="./game.js"></script>
   <script defer src="./script.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
   <header class="site-header">
     <div class="brand">
-      <p class="brand-kicker">Player One</p>
+      <span class="brand-badge">Player One</span>
       <h1>신형섭</h1>
-      <p class="brand-title">개발자</p>
+      <p>개발자</p>
     </div>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#games">Games</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
       <a href="#contact">Contact</a>
+      <a href="#games">Games</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section id="home" class="hero panel">
       <div class="hero-copy">
-        <p class="badge">헬로워얼드</p>
-        <h2>작고 탄탄한 반응형 포트폴리오를 준비하는 첫 번째 루프</h2>
-        <p>기존 콘텐츠를 보존하면서 Games 메뉴와 게임 영역을 위한 기반 구조만 먼저 깔아둡니다.</p>
+        <p class="eyebrow">헬로워얼드</p>
+        <h2>작고 탄탄한 반응형 포트폴리오와 게임을 함께 담은 첫 페이지</h2>
+        <p class="lede">기존 콘텐츠는 보존하고, 확인된 프로필 정보와 확장 가능한 섹션 구조를 먼저 정리했습니다.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#games">Games 보기</a>
+          <a class="button ghost" href="#contact">연락처</a>
+        </div>
       </div>
       <div class="hero-card" aria-hidden="true">
-        <span class="coin coin-a"></span>
-        <span class="coin coin-b"></span>
-        <span class="coin coin-c"></span>
+        <div class="cloud cloud-a"></div>
+        <div class="cloud cloud-b"></div>
+        <div class="coin coin-a"></div>
+        <div class="coin coin-b"></div>
+        <div class="pipe"></div>
       </div>
     </section>
 
-    <section id="about" class="panel">
-      <h2>About</h2>
-      <p>신형섭, 개발자. 기본 소개 섹션은 이후 상세 경력과 프로젝트를 얹을 수 있게 단순한 구조로 시작합니다.</p>
-    </section>
-
-    <section id="work" class="panel">
-      <h2>Work</h2>
-      <p>이 루프에서는 섹션 연결과 반응형 틀만 준비하고, 상세 콘텐츠와 카드 레이아웃은 다음 단계로 미룹니다.</p>
-    </section>
-
-    <section id="games" class="panel games-panel">
+    <section id="about" class="panel section">
       <div class="section-heading">
-        <h2>Games</h2>
-        <p>지렁이 게임은 다음 루프에서 연결합니다. 지금은 진입점과 공간만 준비합니다.</p>
+        <p>About</p>
+        <h2>신형섭 / 개발자</h2>
       </div>
-      <div class="game-shell" role="img" aria-label="게임 준비 영역">
-        <p>Game Area Ready</p>
+      <p>이 사이트는 확인된 기본 프로필을 중심으로 구성되며, 세부 경력과 확장 콘텐츠는 추후 검증된 정보만 반영할 수 있게 설계했습니다.</p>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Intro</h3>
+          <p>헬로워얼드</p>
+        </article>
+        <article class="info-card">
+          <h3>Focus</h3>
+          <p>반응형 웹, 정적 프런트엔드, 게임형 인터랙션</p>
+        </article>
+        <article class="info-card">
+          <h3>Status</h3>
+          <p>공개용 포트폴리오와 게임 기능을 함께 운영하는 구성</p>
+        </article>
       </div>
     </section>
 
-    <section id="contact" class="panel">
-      <h2>Contact</h2>
-      <p>연락처와 외부 링크는 이후 실제 자료를 바탕으로 채워 넣습니다.</p>
+    <section id="projects" class="panel section">
+      <div class="section-heading">
+        <p>Projects</p>
+        <h2>확인 가능한 영역 중심</h2>
+      </div>
+      <div class="card-grid">
+        <article class="project-card">
+          <h3>Portfolio Shell</h3>
+          <p>Home, About, Contact, Games 메뉴가 연결된 반응형 기반.</p>
+        </article>
+        <article class="project-card">
+          <h3>Games Hub</h3>
+          <p>지렁이 게임과 페이지 안의 적 오브젝트 루프를 함께 담는 구조.</p>
+        </article>
+        <article class="project-card">
+          <h3>Deployment Ready</h3>
+          <p>GitHub Pages에 맞는 정적 HTML, CSS, JavaScript 구성.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="panel section">
+      <div class="section-heading">
+        <p>Experience</p>
+        <h2>[사람 확인 필요] 정보를 받을 때까지는 공개 가능한 틀만 유지</h2>
+      </div>
+      <p>검증되지 않은 경력 문구를 임의로 생성하지 않고, 이후 실제 확인 자료를 받으면 이 섹션에만 최소 수정으로 반영할 수 있도록 두었습니다.</p>
+    </section>
+
+    <section id="research" class="panel section">
+      <div class="section-heading">
+        <p>Research</p>
+        <h2>[사람 확인 필요] 보완 예정</h2>
+      </div>
+      <p>현재는 공개 가능한 연구/활동 정보가 확인되지 않았으므로, 레이아웃 자리만 확보했습니다.</p>
+    </section>
+
+    <section id="contact" class="panel section">
+      <div class="section-heading">
+        <p>Contact</p>
+        <h2>연락</h2>
+      </div>
+      <p>외부 링크와 상세 연락처는 확인된 값으로만 채워 넣을 수 있도록 구조만 준비했습니다.</p>
+      <div class="contact-list">
+        <span>GitHub Pages</span>
+        <span>GitHub Repo</span>
+        <span>[사람 확인 필요]</span>
+      </div>
+    </section>
+
+    <section id="games" class="panel section games-section">
+      <div class="section-heading">
+        <p>Games</p>
+        <h2>Snake + Enemy Loop</h2>
+      </div>
+      <div class="games-layout">
+        <div class="game-card game-stage-card">
+          <div class="game-toolbar">
+            <button class="button primary" id="game-start" type="button">Start</button>
+            <button class="button ghost" id="game-pause" type="button">Pause</button>
+            <button class="button ghost" id="game-restart" type="button">Restart</button>
+          </div>
+          <div class="scoreboard" aria-live="polite">
+            <span>Score: <strong id="score">0</strong></span>
+            <span>Best: <strong id="best-score">0</strong></span>
+            <span id="game-status">Ready</span>
+          </div>
+          <div class="game-stage-wrap">
+            <canvas id="snake-canvas" width="480" height="480" aria-label="지렁이 게임 영역"></canvas>
+            <div class="enemy-layer" id="enemy-layer" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <h3>Controls</h3>
+          <p>키보드는 방향키와 WASD를 모두 지원하며, 모바일에서는 화면 버튼으로 조작합니다. 반대 방향 입력과 중복 타이머는 막습니다.</p>
+          <div class="touch-controls" aria-label="모바일 조작 버튼">
+            <button type="button" data-dir="up">▲</button>
+            <div>
+              <button type="button" data-dir="left">◀</button>
+              <button type="button" data-dir="down">▼</button>
+              <button type="button" data-dir="right">▶</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <h3>Enemies</h3>
+          <p>프로젝트 설정의 추가 기능에 맞춰 4개의 적이 랜덤 이동하고, 4초마다 폭발한 뒤 다시 랜덤 재생성되도록 설계했습니다.</p>
+          <ul class="feature-list">
+            <li>4 random enemies</li>
+            <li>explode every 4 seconds</li>
+            <li>respawn randomly</li>
+            <li>infinite repetition</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 </body>

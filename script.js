@@ -6,4 +6,11 @@ if (navToggle && siteNav) {
     const isOpen = siteNav.classList.toggle('is-open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
   });
+
+  siteNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
