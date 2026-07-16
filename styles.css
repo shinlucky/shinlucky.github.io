@@ -351,11 +351,28 @@ main {
 
 .accordion-stack {
   display: grid;
-  gap: 0.85rem;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  align-items: start;
 }
 
 .accordion-box {
   overflow: hidden;
+  min-height: 96px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 36%),
+    linear-gradient(180deg, rgba(9, 22, 47, 0.95), rgba(7, 16, 34, 0.95));
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+}
+
+.accordion-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 3px rgba(255, 214, 79, 0.14);
 }
 
 .accordion-trigger {
@@ -364,7 +381,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.1rem;
+  padding: 1.15rem 1.2rem;
   border: 0;
   background: transparent;
   color: var(--text);
@@ -373,7 +390,10 @@ main {
 
 .accordion-trigger span:first-child {
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  font-family: "Press Start 2P", monospace;
+  letter-spacing: 0.02em;
+  color: #fff5bf;
 }
 
 .accordion-state {
@@ -382,16 +402,19 @@ main {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, #ffe66b, #f4b73b);
+  color: #2d1b00;
+  font-weight: 800;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.18);
 }
 
 .accordion-box.is-open .accordion-state {
-  background: rgba(116, 240, 182, 0.16);
-  color: var(--accent-2);
+  background: linear-gradient(180deg, #8ff3c2, #48d69a);
+  color: #05331d;
 }
 
 .accordion-panel {
-  padding: 0 1.1rem 1.1rem;
+  padding: 0 1.2rem 1.2rem;
   display: grid;
   gap: 0.75rem;
 }
@@ -410,6 +433,11 @@ main {
   padding-left: 1.1rem;
 }
 
+.accordion-panel strong,
+.accordion-panel li::marker {
+  color: #ffd34f;
+}
+
 .contact-list {
   display: flex;
   flex-wrap: wrap;
@@ -419,8 +447,8 @@ main {
 .contact-list span {
   padding: 0.65rem 0.9rem;
   border-radius: 999px;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 235, 140, 0.26);
+  background: rgba(255, 235, 140, 0.07);
 }
 
 .games-section {
@@ -506,6 +534,10 @@ main {
   .hero {
     grid-template-columns: 1fr;
   }
+
+  .accordion-stack {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -538,5 +570,9 @@ main {
 
   .game-stage {
     min-height: 260px;
+  }
+
+  .accordion-stack {
+    grid-template-columns: 1fr;
   }
 }
