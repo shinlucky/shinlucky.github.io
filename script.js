@@ -16,6 +16,14 @@ if (navToggle && siteNav) {
   });
 }
 
+accordionButtons.forEach((button) => {
+  const panel = document.getElementById(button.getAttribute('aria-controls'));
+  const box = button.closest('.accordion-box');
+  button.setAttribute('aria-expanded', 'false');
+  if (panel) panel.hidden = true;
+  if (box) box.classList.remove('is-open');
+});
+
 function setAccordionState(button, expanded) {
   const panel = document.getElementById(button.getAttribute('aria-controls'));
   const box = button.closest('.accordion-box');

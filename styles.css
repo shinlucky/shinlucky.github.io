@@ -396,6 +396,10 @@ main {
   gap: 0.75rem;
 }
 
+.accordion-panel[hidden] {
+  display: none !important;
+}
+
 .accordion-panel p,
 .accordion-panel ul {
   margin: 0;
