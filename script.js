@@ -1,5 +1,6 @@
 const navToggle = document.querySelector('.nav-toggle');
 const siteNav = document.querySelector('.site-nav');
+const accordionButtons = document.querySelectorAll('.accordion-trigger');
 
 if (navToggle && siteNav) {
   navToggle.addEventListener('click', () => {
@@ -14,3 +15,18 @@ if (navToggle && siteNav) {
     });
   });
 }
+
+function setAccordionState(button, expanded) {
+  const panel = document.getElementById(button.getAttribute('aria-controls'));
+  const box = button.closest('.accordion-box');
+  button.setAttribute('aria-expanded', String(expanded));
+  panel.hidden = !expanded;
+  box.classList.toggle('is-open', expanded);
+}
+
+accordionButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    setAccordionState(button, !expanded);
+  });
+});

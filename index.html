@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>신형섭 | 개발자 포트폴리오</title>
-  <meta name="description" content="신형섭의 반응형 프로페셔널 포트폴리오와 지렁이 게임">
+  <meta name="description" content="신형섭의 반응형 프로페셔널 포트폴리오와 과녁맞히기 게임">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <script defer src="./game.js"></script>
   <script defer src="./script.js"></script>
+  <script defer src="./game.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
+
   <header class="site-header">
     <div class="brand">
       <span class="brand-badge">Player One</span>
@@ -33,143 +34,109 @@
   </header>
 
   <main id="main">
-    <section id="home" class="hero panel">
+    <section id="home" class="hero panel world-frame">
       <div class="hero-copy">
         <p class="eyebrow">헬로워얼드</p>
-        <h2>작고 탄탄한 반응형 포트폴리오와 게임을 함께 담은 첫 페이지</h2>
-        <p class="lede">기존 콘텐츠는 보존하고, 확인된 프로필 정보와 확장 가능한 섹션 구조를 먼저 정리했습니다.</p>
+        <h2>Super Mario World 느낌의 밝은 배경 위에 펼치는 포트폴리오</h2>
+        <p class="lede">확인된 프로필 정보와 게임 기능만 먼저 담고, 나머지는 접히는 박스로 정리해 공간을 아낍니다.</p>
         <div class="hero-actions">
           <a class="button primary" href="#games">Games 보기</a>
-          <a class="button ghost" href="#contact">연락처</a>
+          <a class="button ghost" href="#about">소개 열기</a>
         </div>
       </div>
       <div class="hero-card" aria-hidden="true">
         <div class="cloud cloud-a"></div>
         <div class="cloud cloud-b"></div>
+        <div class="hill hill-a"></div>
+        <div class="hill hill-b"></div>
+        <div class="pipe"></div>
         <div class="coin coin-a"></div>
         <div class="coin coin-b"></div>
-        <div class="pipe"></div>
       </div>
     </section>
 
-    <section id="about" class="panel section">
-      <div class="section-heading">
-        <p>About</p>
-        <h2>신형섭 / 개발자</h2>
-      </div>
-      <p>이 사이트는 확인된 기본 프로필을 중심으로 구성되며, 세부 경력과 확장 콘텐츠는 추후 검증된 정보만 반영할 수 있게 설계했습니다.</p>
-      <div class="info-grid">
-        <article class="info-card">
-          <h3>Intro</h3>
-          <p>헬로워얼드</p>
-        </article>
-        <article class="info-card">
-          <h3>Focus</h3>
-          <p>반응형 웹, 정적 프런트엔드, 게임형 인터랙션</p>
-        </article>
-        <article class="info-card">
-          <h3>Status</h3>
-          <p>공개용 포트폴리오와 게임 기능을 함께 운영하는 구성</p>
-        </article>
-      </div>
+    <section class="accordion-stack" aria-label="프로필 섹션">
+      <article id="about" class="accordion-box">
+        <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-about">
+          <span>About</span>
+          <span class="accordion-state">+</span>
+        </button>
+        <div id="panel-about" class="accordion-panel" hidden>
+          <p>신형섭, 개발자. 헬로워얼드.</p>
+          <p>이 사이트는 공개 가능한 기본 정보만 사용하고, 이후 확정된 내용은 최소한으로만 추가할 수 있게 만들었습니다.</p>
+        </div>
+      </article>
+
+      <article id="projects" class="accordion-box">
+        <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-projects">
+          <span>Project</span>
+          <span class="accordion-state">+</span>
+        </button>
+        <div id="panel-projects" class="accordion-panel" hidden>
+          <p>확인 가능한 범위에서는 반응형 정적 사이트와 게임형 인터랙션이 핵심 프로젝트입니다.</p>
+          <ul>
+            <li>Portfolio shell</li>
+            <li>Game hub</li>
+            <li>GitHub Pages deployment</li>
+          </ul>
+        </div>
+      </article>
+
+      <article id="experience" class="accordion-box">
+        <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-experience">
+          <span>Experience</span>
+          <span class="accordion-state">+</span>
+        </button>
+        <div id="panel-experience" class="accordion-panel" hidden>
+          <p>[사람 확인 필요]로 남겨야 하는 확정 전 이력은 아직 문서화하지 않았습니다.</p>
+        </div>
+      </article>
+
+      <article id="research" class="accordion-box">
+        <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-research">
+          <span>Research</span>
+          <span class="accordion-state">+</span>
+        </button>
+        <div id="panel-research" class="accordion-panel" hidden>
+          <p>[사람 확인 필요]로 남겨야 하는 연구·활동 정보는 아직 확인되지 않았습니다.</p>
+        </div>
+      </article>
+
+      <article id="contact" class="accordion-box">
+        <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-contact">
+          <span>Contact</span>
+          <span class="accordion-state">+</span>
+        </button>
+        <div id="panel-contact" class="accordion-panel" hidden>
+          <p>연락처와 외부 링크는 확인된 값만 넣을 수 있도록 자리만 확보했습니다.</p>
+          <div class="contact-list">
+            <span>GitHub Pages</span>
+            <span>GitHub Repo</span>
+            <span>[사람 확인 필요]</span>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section id="projects" class="panel section">
-      <div class="section-heading">
-        <p>Projects</p>
-        <h2>확인 가능한 영역 중심</h2>
-      </div>
-      <div class="card-grid">
-        <article class="project-card">
-          <h3>Portfolio Shell</h3>
-          <p>Home, About, Contact, Games 메뉴가 연결된 반응형 기반.</p>
-        </article>
-        <article class="project-card">
-          <h3>Games Hub</h3>
-          <p>지렁이 게임과 페이지 안의 적 오브젝트 루프를 함께 담는 구조.</p>
-        </article>
-        <article class="project-card">
-          <h3>Deployment Ready</h3>
-          <p>GitHub Pages에 맞는 정적 HTML, CSS, JavaScript 구성.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="panel section">
-      <div class="section-heading">
-        <p>Experience</p>
-        <h2>[사람 확인 필요] 정보를 받을 때까지는 공개 가능한 틀만 유지</h2>
-      </div>
-      <p>검증되지 않은 경력 문구를 임의로 생성하지 않고, 이후 실제 확인 자료를 받으면 이 섹션에만 최소 수정으로 반영할 수 있도록 두었습니다.</p>
-    </section>
-
-    <section id="research" class="panel section">
-      <div class="section-heading">
-        <p>Research</p>
-        <h2>[사람 확인 필요] 보완 예정</h2>
-      </div>
-      <p>현재는 공개 가능한 연구/활동 정보가 확인되지 않았으므로, 레이아웃 자리만 확보했습니다.</p>
-    </section>
-
-    <section id="contact" class="panel section">
-      <div class="section-heading">
-        <p>Contact</p>
-        <h2>연락</h2>
-      </div>
-      <p>외부 링크와 상세 연락처는 확인된 값으로만 채워 넣을 수 있도록 구조만 준비했습니다.</p>
-      <div class="contact-list">
-        <span>GitHub Pages</span>
-        <span>GitHub Repo</span>
-        <span>[사람 확인 필요]</span>
-      </div>
-    </section>
-
-    <section id="games" class="panel section games-section">
+    <section id="games" class="panel games-section">
       <div class="section-heading">
         <p>Games</p>
-        <h2>Snake + Enemy Loop</h2>
+        <h2>Target Shoot</h2>
       </div>
-      <div class="games-layout">
-        <div class="game-card game-stage-card">
-          <div class="game-toolbar">
-            <button class="button primary" id="game-start" type="button">Start</button>
-            <button class="button ghost" id="game-pause" type="button">Pause</button>
-            <button class="button ghost" id="game-restart" type="button">Restart</button>
-          </div>
+      <div class="game-shell">
+        <div class="game-toolbar">
+          <button class="button primary" id="game-action" type="button">Start</button>
           <div class="scoreboard" aria-live="polite">
             <span>Score: <strong id="score">0</strong></span>
             <span>Best: <strong id="best-score">0</strong></span>
             <span id="game-status">Ready</span>
           </div>
-          <div class="game-stage-wrap">
-            <canvas id="snake-canvas" width="480" height="480" aria-label="지렁이 게임 영역"></canvas>
-            <div class="enemy-layer" id="enemy-layer" aria-hidden="true"></div>
-          </div>
         </div>
-
-        <div class="game-card">
-          <h3>Controls</h3>
-          <p>키보드는 방향키와 WASD를 모두 지원하며, 모바일에서는 화면 버튼으로 조작합니다. 반대 방향 입력과 중복 타이머는 막습니다.</p>
-          <div class="touch-controls" aria-label="모바일 조작 버튼">
-            <button type="button" data-dir="up">▲</button>
-            <div>
-              <button type="button" data-dir="left">◀</button>
-              <button type="button" data-dir="down">▼</button>
-              <button type="button" data-dir="right">▶</button>
-            </div>
-          </div>
+        <p class="game-help">Start를 누르면 과녁이 움직이기 시작하고, Shot으로 화살을 발사합니다. 한 번의 버튼으로 시작과 발사를 모두 처리합니다.</p>
+        <div class="game-stage" aria-label="과녁맞히기 게임 영역">
+          <canvas id="target-canvas" width="960" height="560"></canvas>
         </div>
-
-        <div class="game-card">
-          <h3>Enemies</h3>
-          <p>프로젝트 설정의 추가 기능에 맞춰 4개의 적이 랜덤 이동하고, 4초마다 폭발한 뒤 다시 랜덤 재생성되도록 설계했습니다.</p>
-          <ul class="feature-list">
-            <li>4 random enemies</li>
-            <li>explode every 4 seconds</li>
-            <li>respawn randomly</li>
-            <li>infinite repetition</li>
-          </ul>
-        </div>
+        <div class="wind-readout">Wind: <strong id="wind-readout">0.00</strong></div>
       </div>
     </section>
   </main>
